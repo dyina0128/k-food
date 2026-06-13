@@ -1,0 +1,38 @@
+{
+  "section_identifier": "popular_fish_cake_soup_selection",
+  "section_title": "Popular Fish Cake Soup Selection",
+  "section_subtitle": "Warm up your soul with comfort street-style skewered fish cake soups (Eomuk-tang) at home.",
+  "products": [
+    {
+      "id": "eomuk_tang_set_01",
+      "title": "DIY Authentic Korean Fish Cake Soup Set",
+      "price": 18.99,
+      "description": "Make real Korean street-style soup at home! Includes premium fish cakes and a rich savory soup base.",
+      "layout_type": "split_buttons",
+      "buttons": [
+        { "label": "Buy Fish Cakes", "url": "https://www.amazon.com/s?k=Korean+skewered+fish+cake" },
+        { "label": "Buy Soup Base", "url": "https://www.amazon.com/s?k=Korean+fish+cake+soup+base" }
+      ]
+    },
+    {
+      "id": "samjin_cup_06",
+      "title": "Samjin Amook Instant Fish Cake Soup Cup (Pack of 6)",
+      "price": 24.50,
+      "description": "Authentic instant soup cups from Busan's most famous fish cake bakery. Ready in just 3 minutes.",
+      "layout_type": "standard_amazon_button",
+      "buttons": [
+        { "label": "View on Amazon", "url": "https://www.amazon.com/s?k=Samjin+Amook+Instant+Fish+Cake+Soup" }
+      ]
+    },
+    {
+      "id": "dashi_pack_premium",
+      "title": "Premium Anchovy & Kelp Dashi Seafood Soup Pack",
+      "price": 12.99,
+      "description": "The secret to clean, deep traditional Korean broth. Perfect base for any eomuk-tang recipe.",
+      "layout_type": "standard_amazon_button",
+      "buttons": [
+        { "label": "View on Amazon", "url": "https://www.amazon.com/s?k=Korean+anchovy+soup+pack" }
+      ]
+    }
+  ]
+}

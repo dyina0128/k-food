@@ -1,0 +1,48 @@
+{
+  "recipe_id": "seafood_pajeon_en_01",
+  "title": "Crispy Seafood Scallion Pancake (Pajeon)",
+  "summary": "An authentic, extra-crispy savory pancake packed with fresh scallions and a rich seafood combination.",
+  "category": "Korean Classic",
+  "meta": {
+    "prep_cook_time_mins": 20,
+    "difficulty": "Easy",
+    "servings": 2
+  },
+  "ingredients": [
+    { "name": "Fresh Scallions (Green Onions), trimmed", "amount": "1 large bunch (approx. 5-6 oz)" },
+    { "name": "Assorted Seafood Mix (Squid, Shrimp, Clams)", "amount": "1 cup" },
+    { "name": "Korean Frying Mix (Buchimgaru)", "amount": "1 cup" },
+    { "name": "Korean Crispy Frying Mix (Twigimgaru)", "amount": "1/2 cup" },
+    { "name": "Ice-Cold Water", "amount": "1.2 cups" },
+    { "name": "Large Egg, lightly beaten", "amount": "1" },
+    { "name": "Red & Green Chili Peppers, sliced", "amount": "1 each (optional)" },
+    { "name": "Vegetable Oil for frying", "amount": "Generous amount" }
+  ],
+  "tips": [
+    "Always use ice-cold water! It slows down gluten development in the flour mix, resulting in a noticeably crispier, lighter crust.",
+    "Pat dry the seafood mix with paper towels thoroughly before adding it to prevent the pancake from getting soggy."
+  ],
+  "steps": [
+    {
+      "step_number": 1,
+      "title": "Prep the Ingredients",
+      "description": "Thoroughly wash and completely dry the scallions. Cut them in half to fit your frying pan. Pat dry the seafood mix with paper towels to eliminate excess moisture."
+    },
+    {
+      "step_number": 2,
+      "title": "Mix the Batter",
+      "description": "In a mixing bowl, combine 1 cup of Korean frying mix, 1/2 cup of crispy frying mix, and 1.2 cups of ice-cold water. Whisk lightly just until the flour is incorporated."
+    },
+    {
+      "step_number": 3,
+      "title": "Assemble in the Pan",
+      "description": "Heat a generous amount of vegetable oil in a large non-stick skillet over medium-high heat. Arrange the scallions flat in the pan, ladle the batter evenly over them, then scatter the seafood and chilis on top."
+    },
+    {
+      "step_number": 4,
+      "title": "Bind and Flip",
+      "description": "Pour the lightly beaten egg across the top surface to bind the seafood. Cook until the bottom is golden-brown and crispy, then carefully flip, adding a bit more oil around the edges to crisp the other side."
+    }
+  ],
+  "amazon_affiliate_link": "https://www.amazon.com/s?k=Korean+frying+mix"
+}
