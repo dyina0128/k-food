@@ -1,221 +1,118 @@
-// 사장님의 순정 3대장 데이터 + 초호화 4대장(반찬 및 요리) 칩셋 결합 완벽 납땜
-const recipeDatabase = [
-  {
-    "id": "kimchi",
-    "title": "🥢 Dynamic Authentic Kimchi",
-    "desc": "The ultimate global guide to making traditional, crisp, and robust Korean Kimchi from scratch.",
-    "amazonProduct": "Premium Korean Red Pepper Flakes (Gochugaru) - Authentic Grade",
-    "amazonLink": "https://amzn.to/3XmABC1",
-    "ingredients": [
-      "Napa Cabbage (1 Large Head)",
-      "Korean Red Pepper Flakes (Gochugaru - Essential Amazon Match)",
-      "Fish Sauce (3 tbsp)",
-      "Minced Garlic (4 tbsp)",
-      "Fresh Ginger (1 tbsp)",
-      "Salt and Green Onions"
-    ],
-    "steps": [
-      "Cut the Napa cabbage into quarters and salt it thoroughly for 2-3 hours until soft.",
-      "Rinse the cabbage under cold water 3 times and drain the excess water completely.",
-      "Mix Gochugaru, fish sauce, minced garlic, and ginger to create the dynamic flavor paste.",
-      "Spread the paste evenly between each leaf of the cabbage.",
-      "Store in an airtight container at room temperature for 1 day, then move to the fridge."
+// 1. 사장님 사이트의 상세 레시피 데이터 칩셋
+const recipeDetails = {
+  bulgogi: {
+    title: "Classic Korean Beef Bulgogi",
+    desc: "Thinly sliced tender beef marinated in a perfectly balanced sweet and savory soy sauce mixture, grilled with sesame oil.",
+    amazonText: "Chung Jung One Premium Korean BBQ Bulgogi Marinade Sauce",
+    amazonLink: "https://amzn.to/3Bu1245", // 사장님 고유 아마존 링크 자리
+    steps: [
+      "Slightly pat the beef sirloin or ribeye with a paper towel to remove excess blood.",
+      "Mix with fresh sliced onions, carrots, and the premium BBQ bulgogi marinade sauce.",
+      "Marinate in the fridge for at least 30 minutes, then stir-fry rapidly over high heat."
     ]
   },
-  {
-    "id": "pajeon",
-    "title": "🥞 Crispy Scallion Pancake (Pajeon)",
-    "desc": "Super crunchy, savory, and loaded with fresh scallions. The perfect rainy day comfort food.",
-    "amazonProduct": "CJ Beksul Crispy Korean Pancake Mix Flour (Premium)",
-    "amazonLink": "https://amzn.to/3QmXYZ2",
-    "ingredients": [
-      "Premium Korean Pancake Mix (Amazon Match for extreme crispiness)",
-      "Fresh Scallions / Green Onions (1 Bunch)",
-      "Cold Water (200ml)",
-      "Vegetable Oil for frying",
-      "Optional: Seafood Mix (Shrimp, Squid)"
-    ],
-    "steps": [
-      "Mix the Korean pancake flour with ice-cold water to build the ultimate crispy batter.",
-      "Cut fresh scallions to match the size of your frying pan.",
-      "Heat a generous amount of oil in a skillet over medium-high heat (Crucial for crispiness).",
-      "Lay the scallions down, pour the batter over them, and add seafood if desired.",
-      "Fry until the bottom is deeply golden brown, flip, and cook the other side until crispy."
+  japchae: {
+    title: "Japchae (잡채)",
+    desc: "Chewy glass noodles tossed in sweet soy sauce sesame glaze with colorful vegetables like carrots, spinach, wood ear mushroom...",
+    amazonText: "Ottogi Premium Korean Sweet Potato Glass Noodles",
+    amazonLink: "https://amzn.to/47D4M1A",
+    steps: [
+      "Boil the sweet potato glass noodles for 6-7 minutes, drain, and rinse in cold water.",
+      "Stir-fry julienned carrots, spinach, mushrooms, and onions individually with a pinch of salt.",
+      "Toss the noodles and vegetables together with soy sauce, sesame oil, and sugar over low heat."
     ]
   },
-  {
-    "id": "eomuk",
-    "title": "🍲 Street-Style Fish Cake Soup (Eomuk-tang)",
-    "desc": "A warm, comforting, and deeply savory broth paired with authentic skewered fish cakes.",
-    "amazonProduct": "Premium Dried Anchovy & Kelp Soup Base Seafood Packets",
-    "amazonLink": "https://amzn.to/3Zk1234",
-    "ingredients": [
-      "Korean Fish Cakes (Eomuk - Skewered or sliced)",
-      "Korean Radish (Sliced for sweet broth flavor)",
-      "Dried Anchovy & Kelp Broth Base (Amazon Match for instant deep taste)",
-      "Soy Sauce (2 tbsp)",
-      "Green Onions and Red Pepper for garnish"
-    ],
-    "steps": [
-      "Boil water with the Anchovy & Kelp soup base packet and sliced radish for 15-20 minutes.",
-      "Remove the broth packet once the radish turns slightly translucent.",
-      "Fold the fish cakes onto wooden skewers or cut them into bite-sized pieces.",
-      "Place the fish cakes into the boiling broth and season with soy sauce.",
-      "Simmer for 5-10 minutes until the fish cakes expand and absorb the rich soup. Serve hot!"
+  jeyuk: {
+    title: "Jeyuk-Bokkeum (제육볶음)",
+    desc: "Juicy sliced pork stir-fried in a fiery Gochujang (Korean chili paste) sauce, bursting with garlic, onions, and deep...",
+    amazonText: "Chung Jung One Sunchang Traditional Gochujang",
+    amazonLink: "https://amzn.to/3Go1267",
+    steps: [
+      "Slice pork belly or shoulder into bite-sized pieces and prepare fresh vegetables.",
+      "Marinate the meat in a rich mixture of Gochujang, Gochugaru, soy sauce, and minced garlic.",
+      "Stir-fry on high heat with sliced onions and scallions until caramelized and tender."
     ]
   },
-  {
-    "id": "kongnamul",
-    "title": "🎨 Seasoned Bean Sprouts (Kongnamul-muchim)",
-    "desc": "A popular, nutty, and non-spicy traditional side dish (Banchan) that highlights the true essence of Korean home cooking.",
-    "amazonProduct": "Premium Pure Toasted Sesame Oil (Deep Flavor Grade)",
-    "amazonLink": "https://amzn.to/47D4M1A", // 임시 프리미엄 참기름 주소 배선
-    "ingredients": [
-      "Fresh Soy Bean Sprouts (1 lb)",
-      "Pure Toasted Sesame Oil (Amazon Match for rich aroma)",
-      "Toasted Sesame Seeds (1 tsp)",
-      "Minced Garlic (0.5 tbsp)",
-      "Salt and Chopped Green Onions"
-    ],
-    "steps": [
-      "Rinse bean sprouts in cold water and remove any loose skins.",
-      "Boil them in a covered pot with a pinch of salt for exactly 4 minutes (Do not open the lid!).",
-      "Drain immediately and shock them in ice water to maintain a crunchy texture.",
-      "Squeeze out excess water gently, then toss with garlic, salt, and green onions.",
-      "Finish with a generous drizzle of Amazon premium sesame oil and toasted sesame seeds."
-    ]
-  },
-  {
-    "id": "gamjajorim",
-    "title": "🍳 Sweet & Savory Braised Potatoes (Gamja-jorim)",
-    "desc": "An addictive, sweet, and savory potato side dish glazed to perfection. Extremely popular among international fans.",
-    "amazonProduct": "Chung Jung One Naturally Brewed Premium Soy Sauce",
-    "amazonLink": "https://amzn.to/3DeS123", // 임시 간장 주소 배선
-    "ingredients": [
-      "Potatoes (3 Medium, cubed)",
-      "Premium Korean Soy Sauce (Amazon Match for depth of flavor)",
-      "Rice Syrup or Corn Syrup (2 tbsp for shiny glaze)",
-      "Vegetable Oil (1 tbsp)",
-      "Water (1 cup) and Sesame Seeds"
-    ],
-    "steps": [
-      "Peel potatoes and cut them into 1-inch cubes. Soak in cold water for 10 minutes to remove starch.",
-      "Heat vegetable oil in a pan and stir-fry the potato cubes for 3 minutes until slightly translucent.",
-      "Pour in water and premium soy sauce, bring to a boil, then lower heat to medium.",
-      "Simmer for 10-12 minutes until the potatoes are soft and the liquid reduces.",
-      "Add the rice syrup for that signature glassy shine, crank heat up for 1 minute, and sprinkle sesame seeds."
-    ]
-  },
-  {
-    "id": "bulgogi",
-    "title": "🔥 Classic Korean Beef Bulgogi",
-    "desc": "The king of Korean BBQ. Thinly sliced beef marinated in a sweet and savory pear-infused soy sauce glaze.",
-    "amazonProduct": "Chung Jung One Premium Korean BBQ Bulgogi Marinade Sauce",
-    "amazonLink": "https://amzn.to/3Bu1245", // 임시 불고기 소스 주소 배선
-    "ingredients": [
-      "Thinly Sliced Beef Ribeye or Top Sirloin (1 lb)",
-      "Authentic Bulgogi Marinade Sauce (Amazon Match for instant restaurant taste)",
-      "Onion (Sliced)",
-      "Carrot (Julienned)",
-      "Green Onions and Sesame Oil"
-    ],
-    "steps": [
-      "Slightly pat the beef slices with a paper towel to remove excess blood.",
-      "Toss the beef with onion and carrot slices in a large mixing bowl.",
-      "Pour in the premium Amazon bulgogi marinade sauce and mix thoroughly by hand.",
-      "Let it marinate in the fridge for at least 30 minutes (Overnight is best).",
-      "Heat a skillet over high heat and stir-fry the beef rapidly until fully cooked and caramelized."
-    ]
-  },
-  {
-    "id": "tteokbokki",
-    "title": "🥣 Spicy Rice Cakes (Tteokbokki)",
-    "desc": "Korea's ultimate street food sensation. Chewy rice cakes cooked in a sweet, fiery, and addictive Gochujang sauce.",
-    "amazonProduct": "Chung Jung One Sunchang Traditional Gochujang (Hot Pepper Paste)",
-    "amazonLink": "https://amzn.to/3Go1267", // 임시 고추장 주소 배선
-    "ingredients": [
-      "Korean Rice Cakes (Tteokbokki-tteok, 1 lb)",
-      "Traditional Gochujang Hot Pepper Paste (Amazon Match for rich texture)",
-      "Korean Red Pepper Flakes (Gochugaru, 1 tbsp)",
-      "Sugar or Corn Syrup (2 tbsp)",
-      "Fish Cakes (Eomuk, sliced) and Water (2.5 cups)"
-    ],
-    "steps": [
-      "Soak the rice cakes in warm water for 10 minutes to make them extra chewy.",
-      "Boil water in a shallow pan and dissolve the Gochujang, Gochugaru, and sugar completely.",
-      "Add the rice cakes and sliced fish cakes into the boiling sweet-spicy sauce.",
-      "Reduce heat to medium and simmer for 8-10 minutes, stirring constantly so the cakes don't stick.",
-      "Once the sauce thickens and coat the rice cakes perfectly, garnish with green onions and serve."
+  eomuk: {
+    title: "Street-Style Fish Cake Soup (Eomuk-tang)",
+    desc: "Warm up your soul with comfort street-style skewered fish cake soups at home.",
+    amazonText: "Premium Dried Anchovy & Kelp Soup Base Seafood Packets",
+    amazonLink: "https://amzn.to/3Zk1234",
+    steps: [
+      "Pour 3 cups of water into a pot, add the premium soup base, and bring to a boil.",
+      "Cut the fish cakes into bite-sized pieces, add them to the boiling soup, and cook for 3-5 minutes.",
+      "Top with chopped green onions and enjoy it hot with Tteokbokki!"
     ]
   }
-];
+};
 
-const cardsContainer = document.getElementById("cards");
-const detailBox = document.getElementById("detailBox");
-const detailContent = document.getElementById("detailContent");
-const searchInput = document.getElementById("searchInput");
+// 2. 사장님이 만들어 두신 HTML 버튼들과 연동하는 스위치 배선
+document.addEventListener("DOMContentLoaded", function() {
+  // 상세 레시피를 출력할 박스 (기본 하단 구조 활용)
+  const detailBox = document.getElementById("detailBox");
+  const detailContent = document.getElementById("detailContent");
 
-function initKFoodEngine(filter = "") {
-  if (!cardsContainer) return;
-  cardsContainer.innerHTML = "";
+  // 사장님 사이트 내의 모든 버튼을 탐색해서 타격 배선 깔기
+  const allButtons = document.querySelectorAll("button, .viewBtn");
+  
+  allButtons.forEach(button => {
+    button.addEventListener("click", function(e) {
+      // 버튼 텍스트나 부모 카드의 글씨를 분석해서 어떤 요리인지 판별하는 시스템
+      const cardText = button.parentElement.innerText.toLowerCase();
+      let selectedKey = null;
 
-  recipeDatabase.forEach(function(recipe) {
-    if (recipe.title.toLowerCase().includes(filter.toLowerCase()) || 
-        recipe.desc.toLowerCase().includes(filter.toLowerCase())) {
-      
-      const card = document.createElement("div");
-      card.className = "card";
-      card.innerHTML = `
-        <h3>${recipe.title}</h3>
-        <p>${recipe.desc}</p>
-        <button class="viewBtn">View Full Recipe & Ingredients</button>
-      `;
+      if (cardText.includes("bulgogi") || cardText.includes("불고기")) selectedKey = "bulgogi";
+      else if (cardText.includes("japchae") || cardText.includes("잡채")) selectedKey = "japchae";
+      else if (cardText.includes("jeyuk") || cardText.includes("제육")) selectedKey = "jeyuk";
+      else if (cardText.includes("fish cake") || cardText.includes("eomuk") || cardText.includes("어묵")) selectedKey = "eomuk";
 
-      const btn = card.querySelector(".viewBtn");
-      btn.addEventListener("click", function() {
-        showRecipeDetail(recipe);
-      });
+      if (selectedKey && recipeDetails[selectedKey]) {
+        e.preventDefault();
+        const data = recipeDetails[selectedKey];
 
-      cardsContainer.appendChild(card);
-    }
+        // 사장님이 만들어 두신 3-Step 레이아웃 스펙 그대로 하단에 주입
+        if (detailContent && detailBox) {
+          detailContent.innerHTML = `
+            <div style="border-bottom: 2px solid #e5e7eb; padding-bottom: 15px; margin-bottom: 20px;">
+                <h2 style="font-family: 'Georgia', serif; color: #111827; margin:0;">${data.title}</h2>
+                <p style="color: #4b5563; line-height: 1.6; margin: 10px 0 0 0;">${data.desc}</p>
+            </div>
+
+            <!-- 🛒 아마존 파트너스 수익 창출 다이렉트 패널 -->
+            <div style="background: #fffbeb; border: 2px dashed #f59e0b; padding: 20px; border-radius: 12px; margin: 25px 0; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                <div>
+                    <h4 style="margin:0 0 5px 0; color: #b45309; font-weight: bold;">🛒 Essential Ingredient For Best Taste:</h4>
+                    <p style="margin:0; font-weight: 600; color: #1f2937;">${data.amazonText}</p>
+                </div>
+                <a href="${data.amazonLink}" target="_blank" style="background: #ff9900; color: #111827; text-decoration: none; padding: 12px 20px; border-radius: 8px; font-weight: bold; font-size: 0.95rem; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">Buy Ingredients on Amazon →</a>
+            </div>
+
+            <!-- 🌟 본문 중간 구글 애드센스 광고 자동 진입로 -->
+            <div style="background:#f8fafc; padding:12px; text-align:center; color:#94a3b8; font-size:0.8rem; margin:20px 0; border-radius:6px; font-weight:bold; border: 1px solid #e2e8f0;">
+                ADVERTISEMENT <br> (In-Article Responsive Ad Area)
+            </div>
+
+            <!-- 🍳 사장님 고유 3단계 레시피 디자인 포맷 -->
+            <h3 style="font-family: 'Georgia', serif; color: #111827; margin-bottom: 15px;">🍳 How to Cook: 3-Step Recipe</h3>
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <span style="background: #e11d48; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem; flex-shrink: 0;">1</span>
+                    <p style="margin:0; color: #334155; line-height: 1.5;"><strong>STEP 1:</strong> ${data.steps[0]}</p>
+                </div>
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <span style="background: #e11d48; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem; flex-shrink: 0;">2</span>
+                    <p style="margin:0; color: #334155; line-height: 1.5;"><strong>STEP 2:</strong> ${data.steps[1]}</p>
+                </div>
+                <div style="display: flex; gap: 15px; align-items: flex-start;">
+                    <span style="background: #e11d48; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.85rem; flex-shrink: 0;">3</span>
+                    <p style="margin:0; color: #334155; line-height: 1.5;"><strong>STEP 3:</strong> ${data.steps[2]}</p>
+                </div>
+            </div>
+          `;
+          detailBox.style.display = "block";
+          detailBox.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    });
   });
-}
-
-function showRecipeDetail(recipe) {
-  if (!detailContent || !detailBox) return;
-
-  const ingList = recipe.ingredients.map(i => `<li>${i}</li>`).join("");
-  const stepList = recipe.steps.map((s, idx) => `<li><strong>Step ${idx+1}:</strong> ${s}</li>`).join("");
-
-  detailContent.innerHTML = `
-    <h2 style="margin-top:0; color:#0f172a; font-size:1.8rem;">${recipe.title}</h2>
-    <p style="color:#475569; font-size:1.1rem; line-height:1.6; margin-bottom:25px;">${recipe.desc}</p>
-    
-    <div style="background: #fffbeb; border: 2px dashed #f59e0b; padding: 25px; border-radius: 12px; margin-bottom: 30px;">
-      <h4 style="margin:0 0 8px 0; color:#d97706; font-size:1.1rem; font-weight:bold;">💡 Essential Secret Ingredient For This Recipe:</h4>
-      <p style="margin:0 0 15px 0; font-size:1rem; color:#1e293b; font-weight:600;">${recipe.amazonProduct}</p>
-      <a href="${recipe.amazonLink}" target="_blank" style="display:inline-block; background:#f59e0b; color:#ffffff; text-decoration:none; padding:12px 24px; border-radius:8px; font-weight:bold; box-shadow:0 4px 6px -1px rgba(245,158,11,0.3);">Shop This Ingredient On Amazon →</a>
-    </div>
-
-    <div style="background:#f1f5f9; padding:10px; text-align:center; color:#94a3b8; font-size:0.8rem; margin:20px 0; border-radius:6px; font-weight:bold;">
-      ADVERTISEMENT <br> (In-Article Ad Slot)
-    </div>
-
-    <h3 style="color:#0f172a; border-bottom:2px solid #e2e8f0; padding-bottom:8px;">Ingredients Needed</h3>
-    <ul style="line-height:1.8; color:#334155; padding-left:20px; font-size:1.05rem;">${ingList}</ul>
-
-    <h3 style="color:#0f172a; border-bottom:2px solid #e2e8f0; padding-bottom:8px; margin-top:30px;">Step-by-Step Instructions</h3>
-    <ol style="line-height:2; color:#334155; padding-left:20px; font-size:1.05rem; display:flex; flex-direction:column; gap:10px;">${stepList}</ol>
-  `;
-
-  detailBox.style.display = "block";
-  detailBox.scrollIntoView({ behavior: "smooth" });
-}
-
-if (searchInput) {
-  searchInput.addEventListener("input", function() {
-    initKFoodEngine(searchInput.value);
-  });
-}
-
-initKFoodEngine();
+});
