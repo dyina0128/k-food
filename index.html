@@ -5,15 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seoul Soul Food | Global Korean Culinary Guide & Ingredients Shop</title>
+    <!-- Google Fonts for premium typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome for beautiful icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Header Navigation -->
     <header class="main-header">
         <div class="container header-container">
             <a href="#" class="logo">
@@ -27,9 +31,11 @@
                 <a href="#culture" class="nav-link">Korean Culture</a>
                 <a href="#qa" class="nav-link">Q&A</a>
             </nav>
-            </div>
+            <!-- 🌟 장바구니 완벽 제거 완료 -->
+        </div>
     </header>
 
+    <!-- Main Hero Banner (image_28.png 오리지널 스타일) -->
     <section class="hero-section" style="background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.65)), url('images/banner.png');">
         <div class="container hero-container">
             <span class="hero-tagline">For All K-Food Lovers Around the World</span>
@@ -40,188 +46,132 @@
                 From the spicy flavors of Kimchi and Tteokbokki to the comforting warmth of
                 Samgyetang and Kimchi Jjigae, Korean cuisine offers a unique balance of taste,
                 nutrition, and creativity.
+                One of the most remarkable aspects of Korean food is the emphasis on fresh
+                ingredients and shared dining experiences. Meals are often served with a variety
+                of side dishes known as Banchan, creating a colorful and healthy table enjoyed
+                with family and friends.
             </p>
             <a href="#recipes" class="btn-primary">Explore Recipes & Shop</a>
         </div>
     </section>
 
+    <!-- Welcome Description Section -->
     <section class="about-section" id="about">
         <div class="container">
             <div class="section-badge">Welcome & Philosophy</div>
             <h2 class="section-title">Bringing Korean Kitchens to the World</h2>
             <p class="section-subtitle">
-                Korean food is one of the most exciting cuisines in the world, combining rich traditions, fresh
-                ingredients, and bold flavors. From spicy Kimchi and Tteokbokki to comforting soups and grilled Korean
-                BBQ, every dish tells a story about Korea’s culture and history.
+                At Seoul Soul Food, our mission is to help food lovers everywhere experience
+                authentic Korean flavors. We provide trusted recipes, ingredient recommendations, cooking
+                tips, and carefully selected products that make Korean cooking easier and more enjoyable.
             </p>
         </div>
     </section>
 
+    <!-- 🥬 김치 가이드 섹션 -->
     <section class="kimchi-section" id="kimchi">
         <div class="container">
             <div class="section-badge">Korean Kimchi</div>
             <h2 class="section-title">Explore Korean Kimchi</h2>
-            <p class="section-subtitle">
-                Discover the different types of Korean kimchi and their unique flavors.
-            </p>
-            
+            <p class="section-subtitle">Discover the different types of Korean kimchi and their unique flavors.</p>
             <div class="ingredients-grid">
-                
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/baechu-kimchi.png" alt="Baechu Kimchi" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3>Baechu Kimchi</h3>
-                        <p>The most popular Korean cabbage kimchi, fermented with rich red pepper flakes and garlic.</p>
-                    </div>
+                    <img src="images/baechu-kimchi.png" class="ingredient-image">
+                    <h3>Baechu Kimchi</h3>
+                    <p>The most popular Korean cabbage kimchi.</p>
                 </div>
-
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/kkakdugi.png" alt="Kkakdugi" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3>Kkakdugi</h3>
-                        <p>Crunchy diced radish kimchi, packed with refreshing sweetness and deep flavors.</p>
-                    </div>
+                    <img src="images/kkakdugi.png" class="ingredient-image">
+                    <h3>Kkakdugi</h3>
+                    <p>Crunchy diced radish kimchi.</p>
                 </div>
-
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/oi-sobagi.png" alt="Oi Sobagi" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3>Oi Sobagi</h3>
-                        <p>Fresh cucumber kimchi filled with aromatic chives, perfect for crisp summer days.</p>
-                    </div>
+                    <img src="images/oi-sobagi.png" class="ingredient-image">
+                    <h3>Oi Sobagi</h3>
+                    <p>Fresh cucumber kimchi perfect for summer.</p>
                 </div>
-
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/baek-kimchi.png" alt="Baek Kimchi" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3>Baek Kimchi</h3>
-                        <p>Non-spicy white kimchi submerged in cold, savory brine, loved by beginners.</p>
-                    </div>
+                    <img src="images/baek-kimchi.png" class="ingredient-image">
+                    <h3>Baek Kimchi</h3>
+                    <p>Non-spicy kimchi loved by beginners.</p>
                 </div>
-
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/chonggak-kimchi.png" alt="Chonggak Kimchi" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3>Chonggak Kimchi</h3>
-                        <p>Traditional young radish kimchi with crisp greens, offering an incredible crunch.</p>
-                    </div>
+                    <img src="images/chonggak-kimchi.png" class="ingredient-image">
+                    <h3>Chonggak Kimchi</h3>
+                    <p>Traditional young radish kimchi.</p>
                 </div>
-
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/yeolmu-kimchi.png" alt="Yeolmu Kimchi" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3>Yeolmu Kimchi</h3>
-                        <p>Refreshing, light, and tangy young radish leaf kimchi, amazing with cold summer noodles.</p>
-                    </div>
-                </div>
-
-            </div> </div>
-    </section>
-
-    <section class="recipes-section" id="recipes">
-        <div class="container">
-            <div class="section-badge">Curated Menu</div>
-            <h2 class="section-title">Featured Recipes</h2>
-            <p class="section-subtitle">Recreate the iconic flavors of Korea. Select a recipe to learn more, or buy all the essential ingredients bundled together!</p>
-
-            <div class="recipes-grid">
-                <div class="recipe-card">
-                    <div class="recipe-image-wrapper">
-                        <img src="images/recipe_bulgogi.png" alt="Bulgogi (Korean Marinated Beef)" class="recipe-image">
-                        <span class="recipe-tag">Sweet & Savory</span>
-                    </div>
-                    <div class="recipe-content">
-                        <h3 class="recipe-name">Bulgogi (불고기)</h3>
-                        <p class="recipe-desc">Thinly sliced tender beef marinated in a perfectly balanced sweet and savory soy sauce mixture.</p>
-                        <button class="btn-orange buy-btn" data-item="Bulgogi Ingredient Kit">👉 Buy Ingredients</button>
-                    </div>
-                </div>
-
-                <div class="recipe-card">
-                    <div class="recipe-image-wrapper">
-                        <img src="images/recipe_japchae.png" alt="Japchae (Korean Glass Noodles)" class="recipe-image">
-                        <span class="recipe-tag">Glossy & Nutty</span>
-                    </div>
-                    <div class="recipe-content">
-                        <h3 class="recipe-name">Japchae (잡채)</h3>
-                        <p class="recipe-desc">Chewy glass noodles tossed in sweet soy sauce sesame glaze with colorful vegetables.</p>
-                        <button class="btn-orange buy-btn" data-item="Japchae Ingredient Kit">👉 Buy Ingredients</button>
-                    </div>
-                </div>
-
-                <div class="recipe-card">
-                    <div class="recipe-image-wrapper">
-                        <img src="images/recipe_jeyuk.png" alt="Jeyuk-bokkeum (Spicy Stir-fried Pork)" class="recipe-image">
-                        <span class="recipe-tag">Spicy & Smoky</span>
-                    </div>
-                    <div class="recipe-content">
-                        <h3 class="recipe-name">Jeyuk-Bokkeum (제육볶음)</h3>
-                        <p class="recipe-desc">Juicy sliced pork stir-fried in a fiery Gochujang sauce, bursting with deep smoky flavors.</p>
-                        <button class="btn-orange buy-btn" data-item="Jeyuk-Bokkeum Ingredient Kit">👉 Buy Ingredients</button>
-                    </div>
+                    <img src="images/yeolmu-kimchi.png" class="ingredient-image">
+                    <h3>Yeolmu Kimchi</h3>
+                    <p>Refreshing young radish leaf kimchi.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Featured Recipes Section -->
+    <section class="recipes-section" id="recipes">
+        <div class="container">
+            <div class="section-badge">Curated Menu</div>
+            <h2 class="section-title">Featured Recipes</h2>
+            <p class="section-subtitle">Recreate the iconic flavors of Korea.</p>
+            <div class="recipes-grid">
+                <div class="recipe-card">
+                    <img src="images/recipe_bulgogi.png" class="recipe-image">
+                    <h3 class="recipe-name">Bulgogi (불고기)</h3>
+                    <p class="recipe-desc">Thinly sliced tender beef marinated in a perfectly balanced sweet and savory soy sauce mixture.</p>
+                    <button class="btn-orange" onclick="window.open('https://amzn.to/3Bu1245')">🛒 Buy Ingredients</button>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/recipe_japchae.png" class="recipe-image">
+                    <h3 class="recipe-name">Japchae (잡채)</h3>
+                    <p class="recipe-desc">Chewy glass noodles tossed in sweet soy sauce sesame glaze with colorful vegetables.</p>
+                    <button class="btn-orange" onclick="window.open('https://amzn.to/47D4M1A')">🛒 Buy Ingredients</button>
+                </div>
+                <div class="recipe-card">
+                    <img src="images/recipe_jeyuk.png" class="recipe-image">
+                    <h3 class="recipe-name">Jeyuk-Bokkeum (제육볶음)</h3>
+                    <p class="recipe-desc">Juicy sliced pork stir-fried in a fiery Gochujang sauce, bursting with deep flavor.</p>
+                    <button class="btn-orange" onclick="window.open('https://amzn.to/3Go1267')">🛒 Buy Ingredients</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Essential Ingredients Section -->
     <section class="ingredients-section" id="ingredients">
         <div class="container">
             <div class="section-badge">Fresh Market</div>
             <h2 class="section-title">Essential Ingredients</h2>
             <p class="section-subtitle">Premium quality raw ingredients selected by Korean culinary experts.</p>
-
             <div class="ingredients-grid">
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/ing_gochujang.png" alt="Essential Korean Gochujang" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3 class="ingredient-name">Essential Korean Gochujang</h3>
-                        <p class="price">Check price on Amazon</p>
-                        <a href="#" class="btn-buy-simple">View on Amazon</a>
-                    </div>
+                    <img src="images/ing_gochujang.png" class="ingredient-image">
+                    <h3 class="ingredient-name">Essential Korean Gochujang</h3>
+                    <p class="price">Check price on Amazon</p>
+                    <a href="https://www.amazon.com/gp/aw/d/B013HB0CC4/" target="_blank" class="btn-buy-simple">View on Amazon</a>
                 </div>
-
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/ing_ofood.png" alt="O'Food Kimchi Jjigae Sauce" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3 class="ingredient-name">O'Food Kimchi Jjigae Sauce</h3>
-                        <p class="price">Check price on Amazon</p>
-                        <a href="#" class="btn-buy-simple">View on Amazon</a>
-                    </div>
+                    <img src="images/ing_ofood.png" class="ingredient-image">
+                    <h3 class="ingredient-name">O'Food Kimchi Jjigae Sauce</h3>
+                    <p class="price">Check price on Amazon</p>
+                    <a href="https://www.amazon.com/Korean-OFood-Kimchi-Jjigae-Sauce/dp/B0G4CYPSKH/" target="_blank" class="btn-buy-simple">View on Amazon</a>
                 </div>
-
                 <div class="ingredient-card">
-                    <div class="ingredient-image-wrapper">
-                        <img src="images/ing_bibigo.png" alt="Bibigo Kimchi Stew" class="ingredient-image">
-                    </div>
-                    <div class="ingredient-content">
-                        <h3 class="ingredient-name">Bibigo Kimchi Stew with Tofu</h3>
-                        <p class="price">Check price on Amazon</p>
-                        <a href="#" class="btn-buy-simple">View on Amazon</a>
-                    </div>
+                    <img src="images/ing_bibigo.png" class="ingredient-image">
+                    <h3 class="ingredient-name">Bibigo Kimchi Stew with Tofu</h3>
+                    <p class="price">Check price on Amazon</p>
+                    <a href="https://www.amazon.com/Instan-Bibigo-Traditional-Korean-Kimchi/dp/B094YXK8BQ/" target="_blank" class="btn-buy-simple">View on Amazon</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="main-footer">
-        <div class="container footer-content">
+        <div class="container">
             <p>&copy; 2026 Seoul Soul Food. Created with passion for K-food lovers around the world.</p>
+            <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 5px;">As an Amazon Associate I earn from qualifying purchases.</p>
         </div>
     </footer>
 

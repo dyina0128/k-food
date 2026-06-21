@@ -1,8 +1,7 @@
 /* ==========================================================================
-   🏁 SEOUL SOUL FOOD - 김치 가이드 섹션 격자 및 이미지 완벽 복원 세팅
+   🏁 SEOUL SOUL FOOD - 순정 뷰 제어 & 크기 고정 마스터 CSS
    ========================================================================== */
 
-/* 1. 기본 글로벌 리셋 */
 body {
     font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: #faf8f5;
@@ -11,12 +10,12 @@ body {
     color: #1f2937;
 }
 
-/* 2. 상단 바 순정 화이트 복원 */
+/* 🌟 [상단 헤더 내비게이션 바 정렬] */
 .main-header {
     background-color: #ffffff !important;
     border-bottom: 1px solid #e5e7eb !important;
-    position: relative !important;
     width: 100% !important;
+    position: relative !important;
     z-index: 1000;
 }
 .header-container {
@@ -40,84 +39,93 @@ body {
 .nav-menu { display: flex !important; gap: 30px !important; }
 .nav-link { color: #4b5563 !important; text-decoration: none !important; font-weight: 500; }
 
-/* 3. [🔥 핵심 수리] 전 세계 모든 요리, 식재료, 김치 이미지 크기 일괄 고정 강제 세팅 */
+/* 🌟 [image_28.png 메인 대형 배너 규격 복원] */
+.hero-section {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    padding: 140px 20px !important;
+    text-align: center;
+    color: white;
+}
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem !important;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 15px 0;
+    color: #ffffff !important;
+}
+.hero-tagline {
+    color: #ff9900;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* 🌟 [핵심 제어] 모든 이미지를 예쁜 카드 규격으로 일괄 가두기 */
 img, 
 .recipe-image, 
 .ingredient-image, 
-.pajeon-image,
-.ingredient-card img,
+.ingredient-card img, 
 .recipe-card img {
     width: 100% !important;
     max-width: 100% !important;
-    height: 200px !important;     /* 👈 사진 높이를 무조건 200px 규격 상자로 얌전하게 제한 */
-    object-fit: cover !important;  /* 👈 원본 사진 비율이 깨지거나 찌그러지지 않게 센터 자동 커팅 */
+    height: 200px !important;     /* 👈 이미지 높이 무조건 200px 자동 가둠 */
+    object-fit: cover !important;  /* 👈 원본 사진 찌그러짐 원천 차단 */
     border-radius: 12px !important;
     margin-bottom: 12px !important;
     display: block !important;
 }
 
-/* 4. [🔥 핵심 수리] 김치 및 식재료 그리드 정렬선 고정 (한 줄 배치 복원) */
+/* 🌟 가로 바둑판 격자 3열 고정 무조건 한 줄 배치 */
 .recipes-grid, 
 .ingredients-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; /* 👈 무조건 가로 3개씩 한 줄로 칼정렬 */
-    gap: 25px !important;
+    grid-template-columns: repeat(3, 1fr) !important; /* 👈 가로로 무조건 3개씩 배열 */
+    gap: 30px !important;
     max-width: 1200px !important;
-    margin: 30px auto !important;
+    margin: 40px auto !important;
     padding: 0 20px !important;
     box-sizing: border-box !important;
 }
 
-/* 5. 김치/식재료 카드 자체 디자인 규격 */
+/* 🌟 카드 상자 외형 디자인 */
 .recipe-card, 
 .ingredient-card {
     background: #ffffff !important;
     border: 1px solid #e5e7eb !important;
     border-radius: 16px !important;
-    padding: 20px !important;
+    padding: 24px !important;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     box-sizing: border-box !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
 }
 
-.recipe-card:hover, 
-.ingredient-card:hover {
-    transform: translateY(-4px) !important;
-    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05) !important;
-    border-color: #ff9900 !important;
-}
-
-/* 6. 카드 내부 서체 밸런스 */
-.recipe-card h3, .ingredient-card h3 {
-    margin: 5px 0 8px 0 !important;
-    font-size: 1.2rem !important;
-    font-family: 'Playfair Display', serif !important;
-    color: #111827 !important;
-}
-.recipe-card p, .ingredient-card p {
-    margin: 0 0 12px 0 !important;
-    font-size: 0.9rem !important;
-    color: #4b5563 !important;
-    line-height: 1.4 !important;
-    flex-grow: 1 !important;
-}
-
-/* 7. 주황색 아마존 수익 직결 버튼 마감 */
+/* 🌟 아마존 수익 마진 버튼 */
 .btn-orange, 
 .btn-buy-simple, 
 button {
     background-color: #ff9900 !important;
     color: #111827 !important;
     border: none !important;
-    padding: 10px 14px !important;
-    border-radius: 6px !important;
+    padding: 12px 16px !important;
+    border-radius: 8px !important;
     cursor: pointer !important;
     font-weight: bold !important;
     text-align: center !important;
     text-decoration: none !important;
     display: block !important;
     width: 100% !important;
+}
+.btn-orange:hover, .btn-buy-simple:hover { background-color: #e68a00 !important; }
+
+.main-footer {
+    background-color: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
 }
