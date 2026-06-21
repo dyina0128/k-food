@@ -1,49 +1,138 @@
 /* ==========================================================================
-   🏁 SEOUL SOUL FOOD - 순정 HTML 맞춤형 일괄 규격 제어 엔진
+   🏁 SEOUL SOUL FOOD - 상단 바 복원 및 이미지 규격 제어 (최종 출고본)
    ========================================================================== */
 
-/* 1. 글로벌 사진 제어 밸브 (전체 이미지를 예쁜 카드 규격으로 강제 한계 세팅) */
-img, 
+/* 1. 기본 리셋 및Typography */
+body {
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #faf8f5;
+    margin: 0;
+    padding: 0;
+    color: #1f2937;
+}
+
+/* 2. [핵심 수리] image_37.png 스타일의 상단 화이트 내비게이션 바 복원 */
+.main-header {
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #e5e7eb !important;
+    position: relative !important;
+    width: 100% !important;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.header-container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px !important;
+    box-sizing: border-box;
+}
+
+/* 로고 스타일 */
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #111827;
+    text-decoration: none;
+}
+.logo-k { color: #b45309; } /* 오렌지/브라운 포인트 */
+.logo-sub { color: #4b5563; font-weight: 400; }
+
+/* 메뉴 링크 정렬선 */
+.nav-menu {
+    display: flex !important;
+    gap: 30px !important;
+}
+.nav-link {
+    color: #4b5563 !important;
+    text-decoration: none !important;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.nav-link:hover {
+    color: #b45309 !important;
+}
+
+/* 장바구니 영역 */
+.header-actions {
+    display: flex;
+    align-items: center;
+    color: #111827;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.cart-count {
+    background: #e11d48;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-left: 5px;
+    vertical-align: super;
+}
+
+/* 3. [핵심 수리] image_37.png 스타일의 웅장한 와이드 메인 배너 복원 */
+.hero-section {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    padding: 140px 20px !important; /* 👈 위아래 여백을 주어 글씨 뒤로 사진이 장엄하게 깔리도록 조율 */
+    text-align: center;
+    color: white;
+}
+.hero-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.2rem !important;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 15px 0;
+    color: #ffffff !important;
+}
+.hero-tagline {
+    color: #ff9900;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+}
+
+/* 4. [기존 유지] 모든 요리/상품 카드의 이미지 표준화 규격 밸브 */
 .recipe-image, 
 .ingredient-image, 
-.pajeon-image {
+.pajeon-image,
+.ingredient-card img,
+.recipe-card img {
     width: 100% !important;
     max-width: 100% !important;
-    height: 220px !important;     /* 👈 모든 사진 높이를 예쁜 표준 카드 규격으로 제한 */
-    object-fit: cover !important;  /* 👈 사진이 좌우로 찌그러지지 않게 중심 비율 커팅 */
+    height: 220px !important;     /* 👈 사진 크기는 아까 맞춘 이쁜 표준 크기 그대로 고정 */
+    object-fit: cover !important;  
     border-radius: 12px !important;
     margin-bottom: 15px !important;
     display: block !important;
 }
 
-/* 상단 메인 배경 배너(images/banner.png)는 와이드하게 풀려있어야 하므로 예외 처리 */
-.hero-section {
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-}
-.hero-section img {
-    display: none !important; /* 배경 이미지 중복 노출 방지 스위치 */
-}
-
-/* 2. 가로 바둑판 격자 정렬 (3열 배치 링크 직결) */
+/* 바둑판 격자 배열 3열 정렬 고정 */
 .recipes-grid, 
 .ingredients-grid {
     display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; /* 👈 무조건 가로로 3개씩 깔끔하게 정렬 */
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 30px !important;
     max-width: 1200px !important;
-    margin: 30px auto !important;
+    margin: 40px auto !important;
     padding: 0 20px !important;
     box-sizing: border-box !important;
 }
 
-/* 김치 가이드 섹션처럼 카드가 6개인 경우 자동으로 3열 2행으로 이쁘게 정렬 */
-.ingredients-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
-}
-
-/* 화면 크기가 작아지는 모바일 환경 대응 자동 튠업 */
 @media (max-width: 992px) {
     .recipes-grid, .ingredients-grid { grid-template-columns: repeat(2, 1fr) !important; }
 }
@@ -51,48 +140,22 @@ img,
     .recipes-grid, .ingredients-grid { grid-template-columns: repeat(1, 1fr) !important; }
 }
 
-/* 3. 화이트 사각형 상자 카드 규격 (김치, 식재료, 요리 공통) */
+/* 카드 상자 외형 디자인 */
 .recipe-card, 
 .ingredient-card {
     background: #ffffff !important;
     border: 1px solid #e5e7eb !important;
     border-radius: 16px !important;
     padding: 24px !important;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02) !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
-    transition: transform 0.2s ease, box-shadow 0.2s ease !important;
     box-sizing: border-box !important;
 }
 
-.recipe-card:hover, 
-.ingredient-card:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 12px 20px -3px rgba(0, 0, 0, 0.06) !important;
-    border-color: #ff9900 !important; /* 아마존 시그니처 주황색 */
-}
-
-/* 카드 내 텍스트 정비 */
-.recipe-card h3, .ingredient-card h3 {
-    margin: 10px 0 8px 0 !important;
-    font-size: 1.25rem !important;
-    font-family: 'Playfair Display', serif !important;
-    color: #111827 !important;
-}
-
-.recipe-card p, .ingredient-card p {
-    margin: 0 0 16px 0 !important;
-    font-size: 0.95rem !important;
-    color: #4b5563 !important;
-    line-height: 1.5 !important;
-    flex-grow: 1 !important;
-}
-
-/* 4. 사장님 전용 명품 주황색 아마존 마진 버튼 통일 */
+/* 주황색 아마존 마진 버튼 규격 통일 */
 .btn-orange, 
 .btn-buy-simple, 
-.btn-submit, 
 button {
     background-color: #ff9900 !important;
     color: #111827 !important;
@@ -102,24 +165,7 @@ button {
     cursor: pointer !important;
     font-weight: bold !important;
     text-align: center !important;
-    font-size: 0.95rem !important;
     text-decoration: none !important;
     display: block !important;
     width: 100% !important;
-    box-sizing: border-box !important;
-    transition: background-color 0.2s !important;
-}
-
-.btn-orange:hover, .btn-buy-simple:hover, button:hover {
-    background-color: #e68a00 !important;
-}
-
-/* 파전 단독 섹션 카드 와이드 규격 밸런스 패치 */
-.pajeon-card {
-    background: #ffffff !important;
-    border: 1px solid #e5e7eb !important;
-    border-radius: 16px !important;
-    padding: 30px !important;
-    max-width: 800px !important;
-    margin: 40px auto !important;
 }
