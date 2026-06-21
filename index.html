@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seoul Soul Food | Global Korean Culinary Guide</title>
-    <!-- 🌟 사장님의 순정 CSS 파일 연결 -->
+    <title>Seoul Soul Food | Global Korean Culinary Guide & Ingredients</title>
+    <!-- 사장님 고유의 순정 CSS 연결 -->
     <link rel="stylesheet" href="clean-style.css">
 </head>
 <body>
 
-    <!-- 🌟 사장님 순정 내비게이션 바 복구 -->
-    <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: #faf8f5; border-bottom: 1px solid #e5e7eb;">
+    <!-- 1. 상단 메뉴바 섹션 -->
+    <nav class="navbar" style="display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background-color: #faf8f5; border-bottom: 1px solid #e5e7eb;">
         <div class="logo" style="font-size: 1.5rem; font-weight: bold; font-family: 'Georgia', serif; color: #b45309;">Seoul Soul Food</div>
         <div class="menu-links" style="display: flex; gap: 25px; font-weight: 500; color: #4b5563;">
             <span>About K-Food</span>
@@ -22,33 +22,141 @@
         </div>
     </nav>
 
-    <!-- 🌟 웅장했던 상단 메인 비주얼 배너 복구 -->
-    <header class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('images/main-bg.jpg') no-repeat center center/cover; color: white; text-align: center; padding: 100px 20px;">
-        <h1 style="margin: 0; font-size: 3rem; font-family: 'Georgia', serif; font-weight: bold; letter-spacing: -1px;">Experience Authentic Korean Taste at Home</h1>
+    <!-- 2. 와이드 헤더 배너 섹션 -->
+    <header class="hero-section" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/main-bg.jpg') no-repeat center center/cover; color: white; text-align: center; padding: 120px 20px;">
+        <h1 style="margin: 0; font-size: 3rem; font-family: 'Georgia', serif; font-weight: bold; letter-spacing: -1px; color: #ffffff;">Experience Authentic Korean Taste at Home</h1>
         <p style="margin: 15px auto 0 auto; font-size: 1.2rem; max-width: 800px; color: #e5e7eb; line-height: 1.6;">Discover traditional recipes, essential ingredient recommendations, cooking guides, and practical tips that make Korean cooking simple and enjoyable for everyone.</p>
     </header>
 
-    <!-- 🌟 [수익 배선] 상단 애드센스 광고 공간 -->
+    <!-- 구글 애드센스 심사용 광고 슬롯 배선 -->
     <div class="adsense-placeholder" style="max-width: 1200px; margin: 30px auto; text-align: center; background: #f1f5f9; padding: 15px; border-radius: 8px; color: #94a3b8; font-size: 0.8rem; font-weight: bold; border: 1px dashed #cbd5e1;">
         ADVERTISEMENT (Google AdSense Premium Space)
     </div>
 
-    <!-- 검색 영역 -->
-    <div style="max-width: 1200px; margin: 20px auto; padding: 0 20px;">
-        <input type="text" id="searchInput" placeholder="Search recipes or ingredients (e.g., Kimchi, Bulgogi, Tteokbokki)..." style="width: 100%; padding: 15px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 1.1rem; box-sizing: border-box; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
-    </div>
+    <!-- 3. 메인 요리 섹션 (Featured Recipes) -->
+    <section style="max-width: 1200px; margin: 50px auto; padding: 0 20px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <span style="color: #e11d48; text-transform: uppercase; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px;">Curated Menu</span>
+            <h2 style="font-family: 'Georgia', serif; font-size: 2.2rem; margin: 5px 0 10px 0; color: #111827;">Featured Recipes</h2>
+            <p style="color: #6b7280; margin: 0;">Recreate the iconic flavors of Korea. Select a recipe to learn more, or buy all the essential ingredients bundled together!</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/bulgogi.jpg" alt="Bulgogi">
+                <h3>Bulgogi (불고기)</h3>
+                <p>Thinly sliced tender beef marinated in a perfectly balanced sweet and savory soy sauce mixture, grilled with sesame oil.</p>
+                <button class="viewBtn">🛒 Buy Ingredients</button>
+            </div>
+            <div class="card">
+                <img src="images/japchae.jpg" alt="Japchae">
+                <h3>Japchae (잡채)</h3>
+                <p>Chewy glass noodles tossed in sweet soy sauce sesame glaze with colorful vegetables like carrots, spinach, wood ear mushroom.</p>
+                <button class="viewBtn">🛒 Buy Ingredients</button>
+            </div>
+            <div class="card">
+                <img src="images/jeyuk.jpg" alt="Jeyuk">
+                <h3>Jeyuk-Bokkeum (제육볶음)</h3>
+                <p>Juicy sliced pork stir-fried in a fiery Gochujang (Korean chili paste) sauce, bursting with garlic, onions, and deep flavor.</p>
+                <button class="viewBtn">🛒 Buy Ingredients</button>
+            </div>
+        </div>
+    </section>
 
-    <!-- 🌟 7대 천왕 카드들이 예쁘게 바둑판으로 배치될 컨테이너 -->
-    <div id="cards" class="card-container"></div>
+    <!-- 4. 필수 식재료 섹션 (Essential Ingredients) -->
+    <section style="max-width: 1200px; margin: 60px auto; padding: 0 20px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <span style="color: #e11d48; text-transform: uppercase; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px;">Fresh Market</span>
+            <h2 style="font-family: 'Georgia', serif; font-size: 2.2rem; margin: 5px 0 10px 0; color: #111827;">Essential Ingredients</h2>
+            <p style="color: #6b7280; margin: 0;">Premium quality raw ingredients selected by Korean culinary experts. Start your cooking journey with the best basics.</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/gochujang.jpg" alt="Gochujang">
+                <h3>Essential Korean Gochujang (Classic Chili Paste)</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn" onclick="window.open('https://amzn.to/3Go1267')">View on Amazon</button>
+            </div>
+            <div class="card">
+                <img src="images/kimchijigae-sauce.jpg" alt="Kimchi Sauce">
+                <h3>O'Food Kimchi Jjigae Sauce (Spicy Base)</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn" onclick="window.open('https://amzn.to/3Go1267')">View on Amazon</button>
+            </div>
+            <div class="card">
+                <img src="images/bibigo-stew.jpg" alt="Bibigo Stew">
+                <h3>Bibigo Kimchi Stew with Tofu (2 Pack)</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn" onclick="window.open('https://amzn.to/3Go1267')">View on Amazon</button>
+            </div>
+        </div>
+    </section>
 
-    <!-- 🌟 상세 정보 및 아마존 마진 링크가 터지는 상세 정보 베이 -->
+    <!-- 5. 떡볶이 라인업 섹션 (Popular Tteokbokki Selection) -->
+    <section style="max-width: 1200px; margin: 60px auto; padding: 0 20px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <span style="color: #e11d48; text-transform: uppercase; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px;">K-Street Food</span>
+            <h2 style="font-family: 'Georgia', serif; font-size: 2.2rem; margin: 5px 0 10px 0; color: #111827;">Popular Tteokbokki Selection</h2>
+            <p style="color: #6b7280; margin: 0;">Discover the absolute best Korean street food at home. Choose from sweet & savory, fiery gochujang, or creamy rose styles!</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/tteok-rose.jpg" alt="Rose Tteokbokki">
+                <h3>Tteokbokki Korean Rice Cakes - [Rose/Spicy Carbonara]</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn" onclick="window.open('https://amzn.to/3Go1267')">View on Amazon</button>
+            </div>
+            <div class="card">
+                <img src="images/yopokki.jpg" alt="Yopokki">
+                <h3>Yopokki Instant Tteokbokki Pack</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn" onclick="window.open('https://amzn.to/3Go1267')">View on Amazon</button>
+            </div>
+            <div class="card">
+                <img src="images/ofood-tteok.jpg" alt="Ofood Tteok">
+                <h3>Tteokbokki Korean Rice Cakes - [Original Gochujang | Pack of 1]</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn" onclick="window.open('https://amzn.to/3Go1267')">View on Amazon</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. 어묵탕 섹션 (Popular Fish Cake Soup Selection) -->
+    <section style="max-width: 1200px; margin: 60px auto; padding: 0 20px;">
+        <div style="text-align: center; margin-bottom: 40px;">
+            <span style="color: #e11d48; text-transform: uppercase; font-size: 0.85rem; font-weight: bold; letter-spacing: 1px;">K-Comfort Food</span>
+            <h2 style="font-family: 'Georgia', serif; font-size: 2.2rem; margin: 5px 0 10px 0; color: #111827;">Popular Fish Cake Soup Selection</h2>
+            <p style="color: #6b7280; margin: 0;">Warm up your soul with comfort street-style skewered fish cake soups (Eomuk-tang) at home.</p>
+        </div>
+        <div class="card-container">
+            <div class="card">
+                <img src="images/eomuk-soup.jpg" alt="DIY Fish Cake Soup">
+                <h3>DIY Authentic Korean Fish Cake Soup Set</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn">View Full Recipe & Shop</button>
+            </div>
+            <div class="card">
+                <img src="images/samjin-amook.jpg" alt="Samjin Amook">
+                <h3>Samjin Amook Instant Fish Cake Soup Cup (Pack of 6)</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn" onclick="window.open('https://amzn.to/3Zk1234')">View on Amazon</button>
+            </div>
+            <div class="card">
+                <img src="images/anchovy-pack.jpg" alt="Anchovy Pack">
+                <h3>Premium Anchovy & Kelp Dashi Seafood Soup Pack</h3>
+                <p style="color: #e11d48; font-weight: bold; margin-bottom: 10px;">Check price on Amazon</p>
+                <button class="viewBtn" onclick="window.open('https://amzn.to/3Zk1234')">View on Amazon</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 🌟 [핵심 수리] 상세정보창 틀 확보 -->
     <div id="detailBox" style="max-width: 1200px; margin: 40px auto; padding: 0 20px; display: none;">
-        <div id="detailContent" style="background: white; padding: 35px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 10px 25px -3px rgba(0,0,0,0.05);">
-            Select a recipe card above to view full details and shop ingredients!
+        <div id="detailContent" style="background: white; padding: 35px; border-radius: 16px; border: 1px solid #e5e7eb; box-shadow: 0 10px 25px -3px rgba(0,0,0,0.05); font-family: sans-serif;">
+            Select a recipe card above to view details!
         </div>
     </div>
 
-    <!-- 애드센스 심사용 완벽 푸터 마감 -->
+    <!-- 순정 하단 마감 푸터 -->
     <footer style="background-color: #faf8f5; border-top: 1px solid #e5e7eb; text-align: center; padding: 40px 20px; margin-top: 80px; font-size: 0.9rem; color: #6b7280;">
         <div style="max-width: 1200px; margin: 0 auto;">
             <p style="margin: 0 0 10px 0; font-weight: bold; color: #1f2937;">© 2026 Seoul Soul Food. All Rights Reserved.</p>
@@ -61,12 +169,6 @@
                 <a href="about.html" style="color: #4b5563; text-decoration: none;">About Us</a>
             </div>
         </div>
-        <!-- 🌟 사장님 HTML 맨 밑 푸터(footer) 위에 요것만 복사해서 한 줄 얹어주세요! -->
-    <div id="detailBox" style="max-width: 1200px; margin: 40px auto; padding: 0 20px; display: none;">
-        <div id="detailContent" style="background: white; padding: 35px; border-radius: 16px; border: 1px solid #e5e7eb; box-shadow: 0 10px 25px -3px rgba(0,0,0,0.05); font-family: sans-serif;">
-            Select a recipe card above to view details!
-        </div>
-    </div>
     </footer>
 
     <script src="script.js"></script>
