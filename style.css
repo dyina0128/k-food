@@ -1,5 +1,5 @@
 /* ==========================================================================
-   🏁 SEOUL SOUL FOOD - 순정 뷰 제어 & 크기 고정 마스터 CSS
+   🏁 SEOUL SOUL FOOD - 디자인 및 이미지 크기 고정 마스터 CSS (최종 보완판)
    ========================================================================== */
 
 body {
@@ -10,7 +10,7 @@ body {
     color: #1f2937;
 }
 
-/* 🌟 [상단 헤더 내비게이션 바 정렬] */
+/* [상단 헤더 내비게이션 바 정렬] */
 .main-header {
     background-color: #ffffff !important;
     border-bottom: 1px solid #e5e7eb !important;
@@ -39,7 +39,7 @@ body {
 .nav-menu { display: flex !important; gap: 30px !important; }
 .nav-link { color: #4b5563 !important; text-decoration: none !important; font-weight: 500; }
 
-/* 🌟 [image_28.png 메인 대형 배너 규격 복원] */
+/* 메인 대형 배너 규격 복원 */
 .hero-section {
     background-size: cover !important;
     background-position: center center !important;
@@ -63,12 +63,13 @@ body {
     letter-spacing: 1.5px;
 }
 
-/* 🌟 [핵심 제어] 모든 이미지를 예쁜 카드 규격으로 일괄 가두기 */
+/* 🌟 [핵심 제어 부품] 반찬 및 대패삼겹살 카드의 이미지까지 싹 다 잡아두는 배선 */
 img, 
 .recipe-image, 
 .ingredient-image, 
 .ingredient-card img, 
-.recipe-card img {
+.recipe-card img,
+.banchan-section img {
     width: 100% !important;
     max-width: 100% !important;
     height: 200px !important;     /* 👈 이미지 높이 무조건 200px 자동 가둠 */
@@ -78,7 +79,7 @@ img,
     display: block !important;
 }
 
-/* 🌟 가로 바둑판 격자 3열 고정 무조건 한 줄 배치 */
+/* 가로 바둑판 격자 3열 고정 무조건 한 줄 배치 */
 .recipes-grid, 
 .ingredients-grid {
     display: grid !important;
@@ -90,7 +91,7 @@ img,
     box-sizing: border-box !important;
 }
 
-/* 🌟 카드 상자 외형 디자인 */
+/* 카드 상자 외형 디자인 */
 .recipe-card, 
 .ingredient-card {
     background: #ffffff !important;
@@ -104,7 +105,7 @@ img,
     box-sizing: border-box !important;
 }
 
-/* 🌟 아마존 수익 마진 버튼 */
+/* 아마존 수익 마진 버튼 */
 .btn-orange, 
 .btn-buy-simple, 
 button {
