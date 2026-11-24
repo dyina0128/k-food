@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dyinabenefitguide.com/k-food/sitemap.xml
